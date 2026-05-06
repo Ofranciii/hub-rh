@@ -317,7 +317,12 @@ if executar:
                 zipf.write(f"output/{arq}", arq)
 
         with open(zip_path, "rb") as f:
-            st.download_button("📥 Baixar ZIP", f)
+            st.download_button(
+    label="📥 Baixar ZIP",
+    data=f,
+    file_name="documentos.zip",
+    mime="application/zip"
+)
 
 # =========================
 # FOOTER
